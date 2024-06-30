@@ -26,7 +26,11 @@ img{ vertical-align: bottom;}
 html{
     font-size: 15px;
     --red:#ca3c3c;
-    --ff:proxima, sans-serif
+    --dg:#363636;
+    --lg:#ebebeb;
+    --ff:proxima, sans-serif;
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
 }
 
 body{
@@ -43,16 +47,16 @@ body{
 .row{ display: flex; flex-flow: row wrap; margin: 0 -1rem;}
 [class^="col-"]{ padding: 0 1rem; flex: 1 0 auto; }
 
-.col-1{ flex-basis: 8.3336%; max-width: 8.3336%;}
+.col-1{ flex-basis: 8.3333%; max-width: 8.3333%;}
 .col-2{ flex-basis: 16.6667%; max-width: 16.6667%;}
 .col-3{ flex-basis: 25%; max-width: 25%;}
-.col-4{ flex-basis: 33.3336%; max-width: 33.3336%;}
+.col-4{ flex-basis: 33.3333%; max-width: 33.3333%;}
 .col-5{ flex-basis: 41.3336%; max-width: 41.3336%;}
 .col-6{ flex-basis: 50%; max-width: 50%;} 
-.col-7{ flex-basis: 58.3336%; max-width: 58.3336%;} 
+.col-7{ flex-basis: 58.3333%; max-width: 58.3333%;} 
 .col-8{ flex-basis: 66.6667%; max-width: 66.6667%;} 
 .col-9{ flex-basis: 75%; max-width: 75%;} 
-.col-10{ flex-basis: 83.3336%; max-width: 83.3336%;} 
+.col-10{ flex-basis: 83.3333%; max-width: 83.3333%;} 
 .col-11{ flex-basis: 91.6667%; max-width: 91.6667%;} 
 .col-12{ flex-basis: 100%; max-width: 100%;} 
 .img-resp{ max-width: 100%; height: auto;} 
@@ -62,7 +66,7 @@ body{
 
 
 /* custom code */
-header{ background: #000; color: #fff;}
+header{ background: #000; color: #fff; position: sticky; top: 0; z-index: 1;}
 header h1{ font-size: 30px; line-height: 80px; }
 header h1 a{ display: inline-block; color: inherit;}
 nav{ margin-left: -20px;}
@@ -72,14 +76,54 @@ nav a{ display: block; color: inherit; line-height: 80px; padding: 0 1rem; }
 
 
 .banner{ background: #666; color: #fff;}
-.video{ padding: 300px 0;}
+.video{ padding: 20rem 0;}
 .video button{ background: none; border: none; font-size: 10rem; color: inherit; margin-right: 40px;}
 .video p{ font-size: 4rem; color: inherit; font-weight: 100; }
 .video a{ color: var(--red); }
 
 
+.wrap-3{ background: var(--red); color: #fff; padding: 50px 0;}
+h2{ font-size: 72px; line-height: 60px; border-bottom: 10px solid; margin-bottom: 2rem;}
+.circle{ width: 100px; aspect-ratio: 1/1; border: 2px solid; border-radius: 50%; flex-shrink: 0; display: grid; place-items: center; font-size: 36px; margin-right: 2rem;}
+.feature h3{ font-size: 16px; line-height: 30px; }
+.feature p{ font-size: 14px; font-weight: 100; line-height: 22px; }
+.gap{ gap: 4rem 0;}
+
+
+.wrap-4{ color: var(--red); font-size: 36px; line-height: 10rem; text-align: center;}
+
+
+.wrap-5{ background: var(--lg); color: var(--dg); padding: 100px 0;}
+.wrap-5 .btn{ margin: 0 10px 4rem 0;}
+.btn.active{ background: var(--red); color: #fff; border-color: var(--red);}
+.work{ position: relative; margin-bottom: 2rem; overflow: hidden; }
+.work .over{ background: #fff; position: absolute; left: 0; right: 0; bottom: -100px; text-align: center; padding: 2rem 0; opacity: 0; transition: 500ms;}
+.work h3{ font-size: 18px; color: var(--red); margin-bottom: 1.5px;}
+.work p{ font-size: 14px; color: #898989;}
+.work:hover .over{ opacity: 1; bottom: 0;}
+.seemore{ border: none; background: none; color: var(--red); font-size: 36px;}
+.work img{ width: 100%; }
+
+
+
+.wrap-6{ padding: 4rem 0 2rem; background: #666; color: #fff; text-align: center;}
+.slide{ display: none; }
+.slide.active{ display: block; }
+.slide blockquote q{ font: 100 36px/41px var(--ff); }
+.slide img{ margin: 17px 0 10px;}
+.slide figcaption{ font-size: 16px; font-weight: bold;}
+.pager{ justify-content: center; margin-top: 2rem; }
+.pager li{ margin: 5px; }
+.pager a{ display: block; width: 10px; height: 10px; border: 2px solid #fff; border-radius: 50%; }
+.pager a.active{ background: #fff;}
+
+
+.wrap-7{ background: var(--lg); color: var(--dg); padding: 100px 0;}
+
+
 @media screen and (max-width:1220px){
     html{ font-size: 13px;}
+    h2{ font-size: 62px;}
 }
 
 @media screen and (max-width:980px){
@@ -100,22 +144,17 @@ nav a{ display: block; color: inherit; line-height: 80px; padding: 0 1rem; }
 
 @media screen and (max-width:767px){
     html{ font-size: 12px;}
+    h2{ font-size: 60px;}
+    .wrap-5 .btn{ margin-right: 6px;}
+    .collapse{ display: none;}
 }
 
 @media screen and (max-width:460px){
-.col-p-1{ flex-basis: 8.3336%; max-width: 8.3336%;}
-.col-p-2{ flex-basis: 16.6667%; max-width: 16.6667%;}
-.col-p-3{ flex-basis: 25%; max-width: 25%;}
 .col-p-4{ flex-basis: 33.3336%; max-width: 33.3336%;}
-.col-p-5{ flex-basis: 41.3336%; max-width: 41.3336%;}
 .col-p-6{ flex-basis: 50%; max-width: 50%;} 
-.col-p-7{ flex-basis: 58.3336%; max-width: 58.3336%;} 
-.col-p-8{ flex-basis: 66.6667%; max-width: 66.6667%;} 
-.col-p-9{ flex-basis: 75%; max-width: 75%;} 
-.col-p-10{ flex-basis: 83.3336%; max-width: 83.3336%;} 
-.col-p-11{ flex-basis: 91.6667%; max-width: 91.6667%;} 
 .col-p-12{ flex-basis: 100%; max-width: 100%;} 
-.collapse{ display: none;}
+
 .video .flex{ flex-flow: column wrap;}
 .video p{ font-size: 2rem; margin-top: 2rem;}
+.video button{ margin-right: 0;}
 }
