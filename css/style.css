@@ -87,7 +87,7 @@ h2{ font-size: 72px; line-height: 60px; border-bottom: 10px solid; margin-bottom
 .circle{ width: 100px; aspect-ratio: 1/1; border: 2px solid; border-radius: 50%; flex-shrink: 0; display: grid; place-items: center; font-size: 36px; margin-right: 2rem;}
 .feature h3{ font-size: 16px; line-height: 30px; }
 .feature p{ font-size: 14px; font-weight: 100; line-height: 22px; }
-.gap{ gap: 4rem 0;}
+.gap-y{ gap: 4rem 0;}
 
 
 .wrap-4{ color: var(--red); font-size: 36px; line-height: 10rem; text-align: center;}
@@ -119,6 +119,58 @@ h2{ font-size: 72px; line-height: 60px; border-bottom: 10px solid; margin-bottom
 
 
 .wrap-7{ background: var(--lg); color: var(--dg); padding: 100px 0;}
+.team{ position: relative; margin-top: 50px; }
+.social{ position: absolute; left: 140px; top: 60px;}
+.social li{ margin-right: 10px;}
+.social a{ display: block; font-size: 24px; width: 50px; line-height: 50px; border-radius: 50%; background: var(--red); color: #fff; text-align: center;}
+.gap{ margin: 50px 0 0 100px;}
+.gap h3{ font-size: 18px; color: var(--red);}
+.gap small{ font-size: 14px; font-weight: 100; color:#898989}
+.gap p{ font-size: 14px; font-weight: 100; color: #363663; line-height: 22px; margin: 30px 0 33px;}
+
+
+.wrap-8{ background: #666; color: #fff; padding: 85px 0 0 0; text-align: center;}
+.wrap-8 span{ font-size: 72px;}
+.wrap-8 p{ font-size: 72px; font-weight: 100;}
+.wrap-8 b{ font-size: 18px; margin-bottom: 85px; display: block; }
+
+
+.wrap-9{ background: #fff; color: #363636; padding: 100px 0;}
+canvas:empty{ background: #ddd; margin-top: 50px; border-radius: 50%;}
+.accordion{ margin-top: 50px;}
+.accordion li{ margin-bottom: 10px;}
+.accordion a{ display: block; border: 1px solid #ebebeb; padding: 19px; border-radius: 10px; color: #898989;}
+.accordion a span{ margin-right: 24px;}
+.accordion p{ font-size: 14px; font-weight: 100; color: #363636; line-height: 22px; margin: 20px; display: none;}
+.accordion a::after{ content: "+"; float: right;}
+.accordion li:first-child p{ display: block;}
+.accordion li a.active{ color: var(--red);}
+.accordion li a.active::after{ content: '-';}
+
+.wrap-10{ background: var(--red); padding: 23px 0 22px;}
+.wrap-10 input{ background: none; border: none; height: 35px; width: 370px; color: #fff; font: 100 36px var(--ff);}
+.wrap-10 input::placeholder{ color: #fff;}
+.wrap-10 button{ background: #fff; }
+
+
+.wrap-11{ background: #7f7f7f; padding: 28px 0 0 0; }
+.box{ color: #fff; font-size: 24px; background: #a6a6a6; line-height: 95px; text-align: center; margin-bottom: 27px;}
+
+
+.wrap-12{ background: var(--lg); color: var(--dg); padding: 100px 0;}
+.soc{ margin: 20px 0;}
+.soc a{ color: var(--red); margin-right: 1rem;}
+.wrap-12 label{ display: block; border: 2px solid #363636; margin: 1rem 0; padding: 1rem; }
+.wrap-12 input{ border: none; background: none;}
+.wrap-12 textarea{ border: none; background: none; resize: none; height: 45.5px; vertical-align: top;}
+.wrap-12 button{ font-size: 16px; width: 100%; height: 80px; background: #fff; border: none; border-radius: 10px; color: var(--red); margin: 1rem 0;}
+.wrap-12 button span.fa{ font-size: 36px; vertical-align: middle;}
+
+
+.wrap-13{ background: #252525; color: #555; padding: 50px 0; text-align: center;}
+.wrap-13 h3{ color: #fff;}
+.wrap-13 p{ margin: 10px 0; }
+.top{ border: none; background: none; font-size: 36px; color: var(--red);}
 
 
 @media screen and (max-width:1220px){
@@ -140,9 +192,14 @@ h2{ font-size: 72px; line-height: 60px; border-bottom: 10px solid; margin-bottom
 .col-t-11{ flex-basis: 91.6667%; max-width: 91.6667%;} 
 .col-t-12{ flex-basis: 100%; max-width: 100%;} 
 .video p{ font-size: 3rem;}
+.gap{ margin-left: 50px;}
+.col-t-hide{ display: none;}
+.col-t-auto{ flex: 1 0 33.33%; max-width: 50%;}
 }
 
+
 @media screen and (max-width:767px){
+    .col-m-6{ flex-basis: 50%; max-width: 50%;} 
     html{ font-size: 12px;}
     h2{ font-size: 60px;}
     .wrap-5 .btn{ margin-right: 6px;}
@@ -157,4 +214,8 @@ h2{ font-size: 72px; line-height: 60px; border-bottom: 10px solid; margin-bottom
 .video .flex{ flex-flow: column wrap;}
 .video p{ font-size: 2rem; margin-top: 2rem;}
 .video button{ margin-right: 0;}
+.wrap-8 p{ font-size: 54px;}
+.wrap-10 input{ width: 235px; font-size: 24px; }
+canvas{ max-width: 100%;}
+.col-t-auto{ flex: 1 0 50%; max-width: 100%;}
 }
